@@ -520,8 +520,8 @@ local function reanimate()
 	local speedlimit = 3000 --makes your parts move slower if the magnitude of their velocity is higher than this
 	local retVelTime = 0.51 --time that claimed parts have velocity to reclaim in case u lose them
 	local walkSpeed = 16 --your walkspeed (can be changed at runtime)
-	local jumpPower = 50 --your jump power (can be changed at runtime)
-	local gravity = 196.2 --how fast the characters velocity decreases while falling (can be changed at runtime)
+	local jumpPower = 25 --your jump power (can be changed at runtime)
+	local gravity = 40 --how fast the characters velocity decreases while falling (can be changed at runtime)
 	local ctrlclicktp = ctrltp --makes you teleport where u point ur mouse cursor at when click and hold ctrl down
 	local clickfling = clickfling --makes you fling the person you clicked when its available to do so
 	local flingvel = v3(15000,16000,15000) --the rotation velocity that ur character will have while flinging
@@ -1891,13 +1891,13 @@ local function reanimate()
 	end
 	local function setJumpPower(n)
 		if type(n)~="number" then
-			n=50
+			n=25
 		end
 		jumpPower=n
 	end
 	local function setGravity(n)
 		if type(n)~="number" then
-			n=196.2
+			n=40
 		end
 		gravity=n
 	end
