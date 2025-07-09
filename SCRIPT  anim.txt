@@ -1885,7 +1885,7 @@ local function reanimate()
 
 	local function setWalkSpeed(n)
 		if type(n)~="number" then
-			n=16
+			n=22
 		end
 		walkSpeed=n
 	end
@@ -2138,7 +2138,8 @@ RootJoint.C0=Lerp(RootJoint.C0,angles(-1.5707963267948966,0,3.141592653589793),d
 LeftShoulder.C0=Lerp(LeftShoulder.C0,cfMul(cf(-1,0.5,0),angles(0,-1.5707963267948966,0)),deltaTime) 
 Neck.C0=Lerp(Neck.C0,cfMul(cf(0,1,0),angles(-1.5707963267948966,0,3.141592653589793)),deltaTime) end,
 		modeLeft = function()
-			setWalkSpeed(16)
+			setWalkSpeed(16
+)
 		end,
 	})
 	addmode("g", {
@@ -2196,12 +2197,12 @@ LeftShoulder.C0=Lerp(LeftShoulder.C0,cfMul(cf(-1,0.5,0),angles(0,-1.570796326794
 Neck.C0=Lerp(Neck.C0,cfMul(cf(0,1,0),angles(-1.5707963267948966,0,3.141592653589793)),deltaTime) end
 	addmode("l", {
 		modeEntered = function()
-			setWalkSpeed(10)
+			setWalkSpeed25)
 		end,
 		idle = idleL,
 		walk = idleL,
 		modeLeft = function()
-			setWalkSpeed(16)
+			setWalkSpeed(25)
 		end
 	})
 end)
@@ -2826,9 +2827,9 @@ local function reanimate()
 	local novoid = true --prevents parts from going under workspace.FallenPartsDestroyHeight if you control them
 	local speedlimit = 3000 --makes your parts move slower if the magnitude of their velocity is higher than this
 	local retVelTime = 0.51 --time that claimed parts have velocity to reclaim in case u lose them
-	local walkSpeed = 16 --your walkspeed (can be changed at runtime)
-	local jumpPower = 50 --your jump power (can be changed at runtime)
-	local gravity = 196.2 --how fast the characters velocity decreases while falling (can be changed at runtime)
+	local walkSpeed = 25 --your walkspeed (can be changed at runtime)
+	local jumpPower = 25 --your jump power (can be changed at runtime)
+	local gravity = 40 --how fast the characters velocity decreases while falling (can be changed at runtime)
 	local ctrlclicktp = ctrltp --makes you teleport where u point ur mouse cursor at when click and hold ctrl down
 	local clickfling = clickfling --makes you fling the person you clicked when its available to do so
 	local flingvel = v3(15000,16000,15000) --the rotation velocity that ur character will have while flinging
@@ -4198,13 +4199,13 @@ local function reanimate()
 	end
 	local function setJumpPower(n)
 		if type(n)~="number" then
-			n=50
+			n=25
 		end
 		jumpPower=n
 	end
 	local function setGravity(n)
 		if type(n)~="number" then
-			n=196.2
+			n=40
 		end
 		gravity=n
 	end
